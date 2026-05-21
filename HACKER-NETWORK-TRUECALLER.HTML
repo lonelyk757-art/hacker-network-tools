@@ -1,0 +1,1050 @@
+<!DOCTYPE html><html lang="en" data-uh="-517655511"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>HACKER NETWORK PHONE NUMBER LOOKUP VERSION 1.0</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"><style>
+ :root {
+ --primary: #00d4ff;
+ --primary-dark: #00a8cc;
+ --secondary: #7000ff;
+ --accent: #ff006e;
+ --bg-dark: #0a0f1a;
+ --bg-card: rgba(16, 24, 40, 0.9);
+ --border: rgba(0, 212, 255, 0.2);
+ --text-primary: #ffffff;
+ --text-secondary: #94a3b8;
+ --success: #00ff88;
+ --error: #ff4757;
+ }
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ body {
+ font-family: 'Inter', sans-serif;
+ background: var(--bg-dark);
+ min-height: 100vh;
+ color: var(--text-primary);
+ overflow-x: hidden;
+ position: relative;
+ }
+ .bg-grid {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-image: 
+ linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+ linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+ background-size: 50px 50px;
+ pointer-events: none;
+ z-index: 0;
+ }
+ .bg-glow {
+ position: fixed;
+ width: 600px;
+ height: 600px;
+ border-radius: 50%;
+ filter: blur(100px);
+ opacity: 0.1;
+ pointer-events: none;
+ z-index: 0;
+ }
+ .bg-glow-1 {
+ background: var(--primary);
+ top: -200px;
+ right: -200px;
+ animation: float 20s infinite ease-in-out;
+ }
+ .bg-glow-2 {
+ background: var(--secondary);
+ bottom: -200px;
+ left: -200px;
+ animation: float 25s infinite ease-in-out reverse;
+ }
+ @keyframes float {
+ 0%, 100% { transform: translate(0, 0) scale(1); }
+ 50% { transform: translate(30px, -30px) scale(1.1); }
+ }
+ header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ z-index: 100;
+ background: rgba(10, 15, 26, 0.9);
+ backdrop-filter: blur(20px);
+ border-bottom: 1px solid var(--border);
+ padding: 1rem 2rem;
+ }
+ .header-content {
+ max-width: 1400px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ display: flex;
+ align-items: center;
+ gap: 0.75rem;
+ font-weight: 800;
+ font-size: 1.5rem;
+ letter-spacing: -0.5px;
+ }
+ .logo-icon {
+ width: 40px;
+ height: 40px;
+ background: linear-gradient(135deg, var(--primary), var(--secondary));
+ border-radius: 12px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+ }
+ .logo-icon i {
+ font-size: 1.2rem;
+ color: white;
+ }
+ .logo span {
+ background: linear-gradient(135deg, var(--text-primary), var(--primary));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+ .status-badge {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ padding: 0.5rem 1rem;
+ background: rgba(0, 255, 136, 0.1);
+ border: 1px solid rgba(0, 255, 136, 0.3);
+ border-radius: 20px;
+ font-size: 0.8rem;
+ color: var(--success);
+ }
+ .status-dot {
+ width: 8px;
+ height: 8px;
+ background: var(--success);
+ border-radius: 50%;
+ animation: pulse 2s infinite;
+ }
+ @keyframes pulse {
+ 0%, 100% { opacity: 1; }
+ 50% { opacity: 0.5; }
+ }
+ .main-container {
+ position: relative;
+ z-index: 10;
+ max-width: 600px;
+ margin: 0 auto;
+ padding: 120px 20px 60px;
+ }
+ .hero-card {
+ background: var(--bg-card);
+ backdrop-filter: blur(20px);
+ border: 1px solid var(--border);
+ border-radius: 24px;
+ padding: 2.5rem;
+ box-shadow: 
+ 0 20px 60px rgba(0, 0, 0, 0.5),
+ inset 0 1px 0 rgba(255, 255, 255, 0.05);
+ position: relative;
+ overflow: hidden;
+ }
+ .hero-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 1px;
+ background: linear-gradient(90deg, transparent, var(--primary), transparent);
+ }
+ .hero-title {
+ font-size: 2rem;
+ font-weight: 800;
+ margin-bottom: 0.5rem;
+ letter-spacing: -1px;
+ display: flex;
+ align-items: center;
+ gap: 0.75rem;
+ }
+ .hero-title i {
+ color: var(--primary);
+ font-size: 1.75rem;
+ }
+ .hero-title span {
+ background: linear-gradient(135deg, var(--text-primary), var(--primary));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ background-clip: text;
+ }
+ .hero-subtitle {
+ color: var(--text-secondary);
+ font-size: 0.95rem;
+ margin-bottom: 2rem;
+ font-weight: 400;
+ }
+ .input-section {
+ margin-bottom: 1.5rem;
+ }
+ .input-label {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ color: var(--text-secondary);
+ font-size: 0.8rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ margin-bottom: 0.75rem;
+ }
+ .input-wrapper {
+ display: flex;
+ align-items: center;
+ background: rgba(0, 0, 0, 0.5);
+ border: 1.5px solid rgba(255, 255, 255, 0.1);
+ border-radius: 16px;
+ padding: 0.5rem;
+ transition: all 0.3s ease;
+ }
+ .input-wrapper:focus-within {
+ border-color: var(--primary);
+ box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.1);
+ }
+ .country-prefix {
+ display: flex;
+ align-items: center;
+ gap: 0.5rem;
+ padding: 0.75rem 1rem;
+ background: rgba(0, 212, 255, 0.1);
+ border-radius: 10px;
+ margin-right: 0.5rem;
+ font-family: 'JetBrains Mono', monospace;
+ font-weight: 700;
+ color: var(--primary);
+ border: 1px solid rgba(0, 212, 255, 0.2);
+ }
+ #phoneNumber {
+ flex: 1;
+ background: transparent;
+ border: none;
+ padding: 0.75rem;
+ font-size: 1.1rem;
+ color: var(--text-primary);
+ font-family: 'JetBrains Mono', monospace;
+ outline: none;
+ font-weight: 600;
+ }
+ #phoneNumber::placeholder {
+ color: rgba(148, 163, 184, 0.4);
+ font-weight: 400;
+ }
+ .action-buttons {
+ display: flex;
+ flex-direction: column;
+ gap: 0.75rem;
+ margin-top: 1rem;
+ }
+ .btn-primary {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 0.75rem;
+ padding: 1rem 2rem;
+ background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+ border: none;
+ border-radius: 12px;
+ color: var(--bg-dark);
+ font-weight: 700;
+ font-size: 1rem;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ position: relative;
+ overflow: hidden;
+ order: 1;
+ }
+ .btn-primary::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: -100%;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+ transition: left 0.5s ease;
+ }
+ .btn-primary:hover::before {
+ left: 100%;
+ }
+ .btn-primary:hover {
+ transform: translateY(-2px);
+ box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+ }
+ .btn-secondary {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 0.5rem;
+ padding: 0.875rem 1.5rem;
+ background: transparent;
+ border: 1.5px solid rgba(255, 255, 255, 0.2);
+ border-radius: 12px;
+ color: var(--text-secondary);
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ order: 2;
+ }
+ .btn-secondary:hover {
+ border-color: var(--primary);
+ color: var(--primary);
+ background: rgba(0, 212, 255, 0.05);
+ }
+ .btn-tertiary {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 0.5rem;
+ padding: 0.875rem 1.5rem;
+ background: rgba(112, 0, 255, 0.1);
+ border: 1.5px solid rgba(112, 0, 255, 0.3);
+ border-radius: 12px;
+ color: #a855f7;
+ font-weight: 600;
+ cursor: pointer;
+ transition: all 0.3s ease;
+ text-decoration: none;
+ order: 3;
+ }
+ .btn-tertiary:hover {
+ background: rgba(112, 0, 255, 0.2);
+ border-color: var(--secondary);
+ color: #c084fc;
+ transform: translateY(-1px);
+ }
+ .result-section {
+ margin-top: 1.5rem;
+ opacity: 0;
+ transform: translateY(20px);
+ transition: all 0.5s ease;
+ display: none;
+ }
+ .result-section.visible {
+ opacity: 1;
+ transform: translateY(0);
+ display: block;
+ }
+ .result-card {
+ background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(112, 0, 255, 0.05));
+ border: 1px solid var(--border);
+ border-radius: 20px;
+ padding: 2rem;
+ position: relative;
+ overflow: hidden;
+ }
+ .result-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 2px;
+ background: linear-gradient(90deg, var(--primary), var(--secondary));
+ }
+ .loading-overlay {
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba(10, 15, 26, 0.95);
+ backdrop-filter: blur(10px);
+ border-radius: 20px;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 1.5rem;
+ z-index: 50;
+ }
+ .loading-overlay.visible {
+ display: flex;
+ }
+ .globe-container {
+ position: relative;
+ width: 80px;
+ height: 80px;
+ }
+ .globe {
+ width: 100%;
+ height: 100%;
+ border-radius: 50%;
+ background: linear-gradient(135deg, var(--primary), var(--secondary));
+ position: relative;
+ animation: rotate 3s linear infinite;
+ box-shadow: 
+ 0 0 30px rgba(0, 212, 255, 0.5),
+ inset -10px -10px 20px rgba(0, 0, 0, 0.3);
+ }
+ .globe::before {
+ content: '';
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 90%;
+ height: 90%;
+ border-radius: 50%;
+ background: 
+ radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 50%),
+ repeating-linear-gradient(0deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 11px),
+ repeating-linear-gradient(90deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 11px);
+ animation: rotate 10s linear infinite reverse;
+ }
+ .globe-ring {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 120%;
+ height: 120%;
+ border: 2px solid rgba(0, 212, 255, 0.3);
+ border-radius: 50%;
+ animation: pulse-ring 2s ease-out infinite;
+ }
+ .globe-ring:nth-child(2) {
+ width: 140%;
+ height: 140%;
+ animation-delay: 0.5s;
+ }
+ @keyframes rotate {
+ from { transform: rotate(0deg); }
+ to { transform: rotate(360deg); }
+ }
+ @keyframes pulse-ring {
+ 0% { transform: translate(-50%, -50%) scale(0.8); opacity: 1; }
+ 100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0; }
+ }
+ .loading-text {
+ color: var(--primary);
+ font-size: 0.9rem;
+ font-weight: 600;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ animation: blink 1.5s infinite;
+ }
+ @keyframes blink {
+ 0%, 100% { opacity: 1; }
+ 50% { opacity: 0.5; }
+ }
+ .result-header {
+ display: flex;
+ align-items: center;
+ gap: 0.75rem;
+ margin-bottom: 1.5rem;
+ color: var(--primary);
+ font-size: 0.85rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+ .name-display-container {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+ margin-bottom: 1.5rem;
+ padding: 1.5rem;
+ background: rgba(0, 0, 0, 0.3);
+ border-radius: 16px;
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ }
+ .user-avatar {
+ width: 60px;
+ height: 60px;
+ background: linear-gradient(135deg, var(--primary), var(--secondary));
+ border-radius: 50%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 1.5rem;
+ color: white;
+ flex-shrink: 0;
+ box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+ }
+ .name-content {
+ flex: 1;
+ }
+ .name-label {
+ font-size: 0.75rem;
+ color: var(--text-secondary);
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ margin-bottom: 0.25rem;
+ }
+ .name-display {
+ font-size: 1.75rem;
+ font-weight: 800;
+ color: var(--text-primary);
+ letter-spacing: -0.5px;
+ line-height: 1.2;
+ }
+ .meta-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 1rem;
+ }
+ .meta-item {
+ display: flex;
+ align-items: center;
+ gap: 1rem;
+ padding: 1rem;
+ background: rgba(0, 0, 0, 0.3);
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ border-radius: 12px;
+ transition: all 0.3s ease;
+ }
+ .meta-item:hover {
+ border-color: var(--primary);
+ background: rgba(0, 212, 255, 0.05);
+ }
+ .meta-icon {
+ width: 40px;
+ height: 40px;
+ background: rgba(0, 212, 255, 0.1);
+ border-radius: 10px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: var(--primary);
+ font-size: 1.1rem;
+ }
+ .meta-content {
+ flex: 1;
+ }
+ .meta-label {
+ font-size: 0.7rem;
+ color: var(--text-secondary);
+ text-transform: uppercase;
+ letter-spacing: 0.5px;
+ margin-bottom: 0.25rem;
+ }
+ .meta-value {
+ font-size: 1rem;
+ font-weight: 700;
+ color: var(--text-primary);
+ }
+ .network-jazz { color: #ff6b00; }
+ .network-zong { color: #00a651; }
+ .network-ufone { color: #7b1fa2; }
+ .network-telenor { color: #00aeef; }
+ .network-unknown { color: var(--text-secondary); }
+ .error-message {
+ display: none;
+ align-items: center;
+ gap: 0.75rem;
+ padding: 1rem 1.5rem;
+ background: rgba(255, 71, 87, 0.1);
+ border: 1px solid rgba(255, 71, 87, 0.3);
+ border-radius: 12px;
+ color: var(--error);
+ margin-top: 1rem;
+ font-weight: 600;
+ }
+ .error-message.visible {
+ display: flex;
+ animation: shake 0.5s ease;
+ }
+ @keyframes shake {
+ 0%, 100% { transform: translateX(0); }
+ 25% { transform: translateX(-5px); }
+ 75% { transform: translateX(5px); }
+ }
+ footer {
+ position: relative;
+ z-index: 10;
+ padding: 2rem;
+ border-top: 1px solid var(--border);
+ margin-top: 3rem;
+ }
+ .footer-content {
+ max-width: 600px;
+ margin: 0 auto;
+ text-align: center;
+ }
+ .footer-brand {
+ margin-bottom: 1.5rem;
+ }
+ .footer-brand .logo {
+ justify-content: center;
+ margin-bottom: 0.5rem;
+ font-size: 1.25rem;
+ }
+ .footer-brand p {
+ color: var(--text-secondary);
+ font-size: 0.85rem;
+ }
+ .social-links {
+ display: flex;
+ justify-content: center;
+ gap: 1rem;
+ margin-bottom: 1.5rem;
+ }
+ .social-links a {
+ width: 44px;
+ height: 44px;
+ background: rgba(255, 255, 255, 0.05);
+ border: 1px solid rgba(255, 255, 255, 0.1);
+ border-radius: 12px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: var(--text-secondary);
+ font-size: 1.25rem;
+ transition: all 0.3s ease;
+ text-decoration: none;
+ }
+ .social-links a:hover {
+ transform: translateY(-3px);
+ }
+ .social-links a.telegram:hover {
+ background: #0088cc;
+ border-color: #0088cc;
+ color: white;
+ box-shadow: 0 10px 20px rgba(0, 136, 204, 0.3);
+ }
+ .social-links a.whatsapp:hover {
+ background: #25d366;
+ border-color: #25d366;
+ color: white;
+ box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+ }
+ .social-links a.youtube:hover {
+ background: #ff0000;
+ border-color: #ff0000;
+ color: white;
+ box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+ }
+ .footer-bottom {
+ color: var(--text-secondary);
+ font-size: 0.8rem;
+ }
+ @media (max-width: 600px) {
+ .hero-title {
+ font-size: 1.5rem;
+ }
+ .name-display {
+ font-size: 1.25rem;
+ }
+ .meta-grid {
+ grid-template-columns: 1fr;
+ }
+ .main-container {
+ padding: 100px 15px 40px;
+ }
+ .hero-card {
+ padding: 1.5rem;
+ }
+ }
+ </style><base target="_blank"><script>(function(){var n=function(){};['log','warn','error','info','debug','dir','trace','table','group','groupEnd','time','timeEnd','assert','count','clear'].forEach(function(k){try{window.console[k]=n;}catch(e){}});})();</script><script>if(window.top!==window.self){window.top.location.replace(location.href);}</script><script>(function(){
+try{Object.defineProperty(document.documentElement,'outerHTML',{get:function(){return '<!-- PROTECTED BY HACKER NETWORK BOSS -->';}});}catch(e){}
+try{Object.defineProperty(document.documentElement,'innerHTML',{get:function(){return '';}});}catch(e){}
+try{
+  var _oc=console.log.bind(console);
+  Object.defineProperty(document,'documentElement',{get:function(){
+    var _el=document.querySelector('html');
+    return new Proxy(_el,{get:function(t,p){
+      if(p==='outerHTML'||p==='innerHTML')return '<!-- SOURCE PROTECTED -->';
+      var v=t[p];return typeof v==='function'?v.bind(t):v;
+    }});
+  }});
+}catch(e){}
+})();</script></head><body>
+<!-- HACKER NETWORK POPUP -->
+<div id="hacker-modal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:10000;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(10px);">
+    <div style="background:#0a0f1a;padding:40px;border:2px solid #00d4ff;border-radius:24px;text-align:center;max-width:450px;color:white;font-family:'Inter', sans-serif;box-shadow: 0 0 50px rgba(0, 212, 255, 0.3);">
+        <div style="width:70px;height:70px;background:linear-gradient(135deg, #00d4ff, #7000ff);border-radius:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <h2 style="font-size:24px;margin-bottom:10px;background:linear-gradient(135deg, #fff, #00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">HACKER NETWORK</h2>
+        <p style="color:#94a3b8;margin-bottom:30px;line-height:1.6;">Welcome to the official Hacker Network tools. To continue, please join our community and check our latest updates.</p>
+        <div style="display:grid;gap:15px;margin-bottom:25px;">
+            <a href="https://whatsapp.com/channel/0029VbAH7YzHbFV1Sa4c980d" target="_blank" style="background:#25d366;color:white;padding:14px;text-decoration:none;border-radius:12px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;transition:0.3s;">JOIN OUR CHANNEL</a>
+            <a href="https://hackernetworkyt.vercel.app" target="_blank" style="background:#00d4ff;color:#0a0f1a;padding:14px;text-decoration:none;border-radius:12px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;transition:0.3s;">VISIT OUR WEBSITE</a>
+        </div>
+        <button onclick="document.getElementById('hacker-modal').style.display='none'" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#94a3b8;padding:10px 20px;cursor:pointer;border-radius:10px;font-size:14px;transition:0.3s;">Enter Tools</button>
+    </div>
+</div>
+<!-- END HACKER NETWORK POPUP -->
+<div class="bg-grid"></div><div class="bg-glow bg-glow-1"></div><div class="bg-glow bg-glow-2"></div><header><div class="header-content"><div class="logo"><div class="logo-icon"><i class="fa-solid fa-satellite-dish"></i></div><span>HACKER NETWORK</span></div><div class="status-badge"><div class="status-dot"></div><span>Online</span></div></div></header><main class="main-container"><div class="hero-card"><h1 class="hero-title"><i class="fa-solid fa-mobile-screen-button"></i><span>HACKER NETWORK</span></h1><p class="hero-subtitle">Global Caller Intelligence & Network Detection System</p><div class="input-section"><div class="input-label"><i class="fa-solid fa-hashtag"></i>
+ Phone Number (Without + County Code)
+ </div><div class="input-wrapper"><div class="country-prefix"><i class="fa-solid fa-plus"></i></div><input type="tel" id="phoneNumber" placeholder="923036992121" value=""></div></div><div class="action-buttons"><button class="btn-primary" id="lookupBtn"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></button><button class="btn-secondary" id="sampleBtn"><i class="fa-solid fa-bolt"></i><span>Try A Demo</span></button><a href="https://ftgmdb.pages.dev" target="_blank" class="btn-tertiary"><i class="fa-solid fa-database"></i><span>Try our Sim DB</span></a></div><div class="error-message" id="errorBox"><i class="fa-solid fa-triangle-exclamation"></i><span id="errorText">Invalid number format</span></div><div class="result-section" id="resultSection"><div class="result-card"><div class="loading-overlay" id="loadingOverlay"><div class="globe-container"><div class="globe-ring"></div><div class="globe-ring"></div><div class="globe"></div></div><div class="loading-text">Searching Global Database...</div></div><div class="result-header"><i class="fa-solid fa-fingerprint"></i>
+ Identity Verified
+ </div><div class="name-display-container"><div class="user-avatar"><i class="fa-solid fa-user"></i></div><div class="name-content"><div class="name-label">Owner</div><div class="name-display" id="nameDisplay">—</div></div></div><div class="meta-grid"><div class="meta-item"><div class="meta-icon"><i class="fa-solid fa-tower-cell"></i></div><div class="meta-content"><div class="meta-label">Network</div><div class="meta-value" id="networkDisplay">—</div></div></div><div class="meta-item"><div class="meta-icon"><i class="fa-solid fa-earth-americas"></i></div><div class="meta-content"><div class="meta-label">Country</div><div class="meta-value" id="countryDisplay">—</div></div></div></div></div></div></div></main><footer><div class="footer-content"><div class="footer-brand"><div class="logo"><div class="logo-icon"><i class="fa-solid fa-satellite-dish"></i></div><span>HACKER NETWORK OWNS</span></div><p>Global phone intelligence platform</p></div><div class="social-links"><a href="#" class="telegram" title="Telegram"><i class="fa-brands fa-telegram"></i></a><a href="#" class="whatsapp" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="#" class="youtube" title="YouTube"><i class="fa-brands fa-youtube"></i></a></div><div class="footer-bottom"><i class="fa-regular fa-copyright"></i> 2026 TrueLookup. HACKER NETWORK OWNS.
+ </div></div></footer><script>
+ // Country codes database
+ const countryCodes = {
+ '1': 'United States/Canada',
+ '7': 'Russia/Kazakhstan',
+ '20': 'Egypt',
+ '27': 'South Africa',
+ '30': 'Greece',
+ '31': 'Netherlands',
+ '32': 'Belgium',
+ '33': 'France',
+ '34': 'Spain',
+ '36': 'Hungary',
+ '39': 'Italy',
+ '40': 'Romania',
+ '41': 'Switzerland',
+ '43': 'Austria',
+ '44': 'United Kingdom',
+ '45': 'Denmark',
+ '46': 'Sweden',
+ '47': 'Norway',
+ '48': 'Poland',
+ '49': 'Germany',
+ '51': 'Peru',
+ '52': 'Mexico',
+ '53': 'Cuba',
+ '54': 'Argentina',
+ '55': 'Brazil',
+ '56': 'Chile',
+ '57': 'Colombia',
+ '58': 'Venezuela',
+ '60': 'Malaysia',
+ '61': 'Australia',
+ '62': 'Indonesia',
+ '63': 'Philippines',
+ '64': 'New Zealand',
+ '65': 'Singapore',
+ '66': 'Thailand',
+ '81': 'Japan',
+ '82': 'South Korea',
+ '84': 'Vietnam',
+ '86': 'China',
+ '90': 'Turkey',
+ '91': 'India',
+ '92': 'Pakistan',
+ '93': 'Afghanistan',
+ '94': 'Sri Lanka',
+ '95': 'Myanmar',
+ '98': 'Iran',
+ '212': 'Morocco',
+ '213': 'Algeria',
+ '216': 'Tunisia',
+ '218': 'Libya',
+ '220': 'Gambia',
+ '221': 'Senegal',
+ '222': 'Mauritania',
+ '223': 'Mali',
+ '224': 'Guinea',
+ '225': 'Ivory Coast',
+ '226': 'Burkina Faso',
+ '227': 'Niger',
+ '228': 'Togo',
+ '229': 'Benin',
+ '230': 'Mauritius',
+ '231': 'Liberia',
+ '232': 'Sierra Leone',
+ '233': 'Ghana',
+ '234': 'Nigeria',
+ '235': 'Chad',
+ '236': 'Central African Republic',
+ '237': 'Cameroon',
+ '238': 'Cape Verde',
+ '239': 'Sao Tome and Principe',
+ '240': 'Equatorial Guinea',
+ '241': 'Gabon',
+ '242': 'Congo',
+ '243': 'DR Congo',
+ '244': 'Angola',
+ '245': 'Guinea-Bissau',
+ '248': 'Seychelles',
+ '249': 'Sudan',
+ '250': 'Rwanda',
+ '251': 'Ethiopia',
+ '252': 'Somalia',
+ '253': 'Djibouti',
+ '254': 'Kenya',
+ '255': 'Tanzania',
+ '256': 'Uganda',
+ '257': 'Burundi',
+ '258': 'Mozambique',
+ '260': 'Zambia',
+ '261': 'Madagascar',
+ '262': 'Reunion',
+ '263': 'Zimbabwe',
+ '264': 'Namibia',
+ '265': 'Malawi',
+ '266': 'Lesotho',
+ '267': 'Botswana',
+ '268': 'Eswatini',
+ '269': 'Comoros',
+ '290': 'Saint Helena',
+ '291': 'Eritrea',
+ '297': 'Aruba',
+ '298': 'Faroe Islands',
+ '299': 'Greenland',
+ '350': 'Gibraltar',
+ '351': 'Portugal',
+ '352': 'Luxembourg',
+ '353': 'Ireland',
+ '354': 'Iceland',
+ '355': 'Albania',
+ '356': 'Malta',
+ '357': 'Cyprus',
+ '358': 'Finland',
+ '359': 'Bulgaria',
+ '370': 'Lithuania',
+ '371': 'Latvia',
+ '372': 'Estonia',
+ '373': 'Moldova',
+ '374': 'Armenia',
+ '375': 'Belarus',
+ '376': 'Andorra',
+ '377': 'Monaco',
+ '378': 'San Marino',
+ '380': 'Ukraine',
+ '381': 'Serbia',
+ '382': 'Montenegro',
+ '383': 'Kosovo',
+ '385': 'Croatia',
+ '386': 'Slovenia',
+ '387': 'Bosnia and Herzegovina',
+ '389': 'North Macedonia',
+ '420': 'Czech Republic',
+ '421': 'Slovakia',
+ '423': 'Liechtenstein',
+ '500': 'Falkland Islands',
+ '501': 'Belize',
+ '502': 'Guatemala',
+ '503': 'El Salvador',
+ '504': 'Honduras',
+ '505': 'Nicaragua',
+ '506': 'Costa Rica',
+ '507': 'Panama',
+ '508': 'Saint Pierre and Miquelon',
+ '509': 'Haiti',
+ '590': 'Guadeloupe',
+ '591': 'Bolivia',
+ '592': 'Guyana',
+ '593': 'Ecuador',
+ '594': 'French Guiana',
+ '595': 'Paraguay',
+ '596': 'Martinique',
+ '597': 'Suriname',
+ '598': 'Uruguay',
+ '599': 'Caribbean Netherlands',
+ '670': 'East Timor',
+ '672': 'Norfolk Island',
+ '673': 'Brunei',
+ '674': 'Nauru',
+ '675': 'Papua New Guinea',
+ '676': 'Tonga',
+ '677': 'Solomon Islands',
+ '678': 'Vanuatu',
+ '679': 'Fiji',
+ '680': 'Palau',
+ '681': 'Wallis and Futuna',
+ '682': 'Cook Islands',
+ '683': 'Niue',
+ '685': 'Samoa',
+ '686': 'Kiribati',
+ '687': 'New Caledonia',
+ '688': 'Tuvalu',
+ '689': 'French Polynesia',
+ '690': 'Tokelau',
+ '691': 'Micronesia',
+ '692': 'Marshall Islands',
+ '850': 'North Korea',
+ '852': 'Hong Kong',
+ '853': 'Macau',
+ '855': 'Cambodia',
+ '856': 'Laos',
+ '880': 'Bangladesh',
+ '886': 'Taiwan',
+ '960': 'Maldives',
+ '961': 'Lebanon',
+ '962': 'Jordan',
+ '963': 'Syria',
+ '964': 'Iraq',
+ '965': 'Kuwait',
+ '966': 'Saudi Arabia',
+ '967': 'Yemen',
+ '968': 'Oman',
+ '970': 'Palestine',
+ '971': 'UAE',
+ '972': 'Israel',
+ '973': 'Bahrain',
+ '974': 'Qatar',
+ '975': 'Bhutan',
+ '976': 'Mongolia',
+ '977': 'Nepal',
+ '992': 'Tajikistan',
+ '993': 'Turkmenistan',
+ '994': 'Azerbaijan',
+ '995': 'Georgia',
+ '996': 'Kyrgyzstan',
+ '998': 'Uzbekistan'
+ };
+ // Pakistan network codes
+ function detectNetwork(number) {
+ if (number.startsWith('92')) {
+ const localNumber = number.substring(2);
+ if (localNumber.length >= 3) {
+ const prefix = localNumber.substring(0, 3);
+ const prefixInt = parseInt(prefix);
+ if ((prefixInt >= 300 && prefixInt <= 309) || (prefixInt >= 320 && prefixInt <= 329)) {
+ return { name: 'Jazz', class: 'network-jazz' };
+ }
+ if ((prefixInt >= 310 && prefixInt <= 319) || (prefixInt >= 370 && prefixInt <= 371)) {
+ return { name: 'Zong', class: 'network-zong' };
+ }
+ if (prefixInt >= 330 && prefixInt <= 339) {
+ return { name: 'Ufone', class: 'network-ufone' };
+ }
+ if (prefixInt >= 340 && prefixInt <= 349) {
+ return { name: 'Telenor', class: 'network-telenor' };
+ }
+ }
+ }
+ return { name: 'Not From Pak', class: 'network-unknown' };
+ }
+ function detectCountry(number) {
+ for (let len = 3; len >= 1; len--) {
+ const code = number.substring(0, len);
+ if (countryCodes[code]) {
+ return { code: code, name: countryCodes[code] };
+ }
+ }
+ return { code: '—', name: 'Unknown' };
+ }
+ // DOM elements
+ const phoneInput = document.getElementById('phoneNumber');
+ const lookupBtn = document.getElementById('lookupBtn');
+ const sampleBtn = document.getElementById('sampleBtn');
+ const resultSection = document.getElementById('resultSection');
+ const nameDisplay = document.getElementById('nameDisplay');
+ const networkDisplay = document.getElementById('networkDisplay');
+ const countryDisplay = document.getElementById('countryDisplay');
+ const errorBox = document.getElementById('errorBox');
+ const errorText = document.getElementById('errorText');
+ const loadingOverlay = document.getElementById('loadingOverlay');
+ const API_BASE = 'https://faisal-ali-truecaller.ftgmhacks.workers.dev/?key=ftgmxtcaller&number=';
+ function showError(message) {
+ errorText.textContent = message;
+ errorBox.classList.add('visible');
+ resultSection.classList.remove('visible');
+ }
+ function hideError() {
+ errorBox.classList.remove('visible');
+ }
+ function setLoading(isLoading) {
+ if (isLoading) {
+ loadingOverlay.classList.add('visible');
+ lookupBtn.disabled = true;
+ lookupBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i><span>Searching...</span>';
+ } else {
+ loadingOverlay.classList.remove('visible');
+ lookupBtn.disabled = false;
+ lookupBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i><span>Search</span>';
+ }
+ }
+ async function performLookup(number) {
+ hideError();
+ let cleaned = number.replace(/\s+/g, '').replace(/\+/g, '');
+ if (!/^\d+$/.test(cleaned)) {
+ showError('Invalid number format. Use digits only.');
+ return;
+ }
+ if (cleaned.length < 7) {
+ showError('Number too short. Include country code.');
+ return;
+ }
+ const country = detectCountry(cleaned);
+ const network = detectNetwork(cleaned);
+ setLoading(true);
+ resultSection.classList.add('visible');
+ try {
+ const url = `${API_BASE}${encodeURIComponent(cleaned)}`;
+ const response = await fetch(url);
+ const data = await response.json();
+ if (data.status !== 'success' || !data.data) {
+ throw new Error(data.message || 'No data returned');
+ }
+ const callerName = data.data.name || 'Unknown';
+ nameDisplay.textContent = callerName;
+ networkDisplay.innerHTML = `<span class="${network.class}">${network.name}</span>`;
+ countryDisplay.textContent = country.name;
+ } catch (err) {
+ console.error('Lookup error:', err);
+ nameDisplay.textContent = '—';
+ networkDisplay.innerHTML = `<span class="${network.class}">${network.name}</span>`;
+ countryDisplay.textContent = country.name;
+ if (err.message && err.message !== 'No data returned') {
+ showError('API Error: ' + err.message);
+ }
+ } finally {
+ setLoading(false);
+ }
+ }
+ lookupBtn.addEventListener('click', () => {
+ performLookup(phoneInput.value.trim());
+ });
+ phoneInput.addEventListener('keypress', (e) => {
+ if (e.key === 'Enter') {
+ lookupBtn.click();
+ }
+ });
+ phoneInput.addEventListener('input', () => {
+ hideError();
+ });
+ sampleBtn.addEventListener('click', () => {
+ phoneInput.value = '923036992121';
+ performLookup('923035992121');
+ });
+ </script><script>document.addEventListener('contextmenu',function(e){e.preventDefault();return false;});</script><script>['copy','cut','selectstart','dragstart'].forEach(function(ev){document.addEventListener(ev,function(e){e.preventDefault();});});</script><style>*{-webkit-user-select:none!important;user-select:none!important;}</style><script>document.addEventListener('keydown',function(e){var b=[123];if(e.ctrlKey&&e.shiftKey)b.push(73,74,67);if(e.ctrlKey)b.push(85,83,65,80,86);if(b.indexOf(e.keyCode)>-1){e.preventDefault();return false;}});</script><script>(function(){
+if(window.self!==window.top)return;
+var _b=false;
+function _chk(){
+  var _dw=window.outerWidth-window.innerWidth;
+  var _dh=window.outerHeight-window.innerHeight;
+  if(_dw>200||_dh>200){
+    if(!_b){_b=true;
+      document.body.style.cssText='margin:0;display:flex;align-items:center;justify-content:center;height:100vh;background:#050A15;';
+      document.body.innerHTML='<div style="text-align:center;color:#FF3B30;font-family:monospace;"><i class="fa-solid fa-ban" style="font-size:64px;margin-bottom:16px;filter:drop-shadow(0 0 15px rgba(255,59,48,0.5));"></i><div style="font-size:22px;letter-spacing:3px;font-weight:bold;">DEVTOOLS BLOCKED</div></div>';
+    }
+  }else{_b=false;}
+}
+setInterval(_chk,1000);
+})();</script><script>(function(){
+if(window.self!==window.top)return;
+var _h=-517655511;
+window.addEventListener('load',function(){
+  setTimeout(function(){
+    var _el=document.documentElement;
+    var _stored=_el&&_el.getAttribute('data-uh');
+    if(!_stored||parseInt(_stored,10)!==_h){
+      document.open();document.write('<html><head><meta charset="UTF-8"><style>*{margin:0;padding:0;box-sizing:border-box;}body{background:#050A15;display:flex;align-items:center;justify-content:center;min-height:100vh;font-family:monospace;}</style><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head><body>
+<!-- HACKER NETWORK POPUP -->
+<div id="hacker-modal" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:10000;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(10px);">
+    <div style="background:#0a0f1a;padding:40px;border:2px solid #00d4ff;border-radius:24px;text-align:center;max-width:450px;color:white;font-family:'Inter', sans-serif;box-shadow: 0 0 50px rgba(0, 212, 255, 0.3);">
+        <div style="width:70px;height:70px;background:linear-gradient(135deg, #00d4ff, #7000ff);border-radius:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        </div>
+        <h2 style="font-size:24px;margin-bottom:10px;background:linear-gradient(135deg, #fff, #00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">HACKER NETWORK</h2>
+        <p style="color:#94a3b8;margin-bottom:30px;line-height:1.6;">Welcome to the official Hacker Network tools. To continue, please join our community and check our latest updates.</p>
+        <div style="display:grid;gap:15px;margin-bottom:25px;">
+            <a href="https://whatsapp.com/channel/0029VbAH7YzHbFV1Sa4c980d" target="_blank" style="background:#25d366;color:white;padding:14px;text-decoration:none;border-radius:12px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;transition:0.3s;">JOIN OUR CHANNEL</a>
+            <a href="https://hackernetworkyt.vercel.app" target="_blank" style="background:#00d4ff;color:#0a0f1a;padding:14px;text-decoration:none;border-radius:12px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:10px;transition:0.3s;">VISIT OUR WEBSITE</a>
+        </div>
+        <button onclick="document.getElementById('hacker-modal').style.display='none'" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#94a3b8;padding:10px 20px;cursor:pointer;border-radius:10px;font-size:14px;transition:0.3s;">Enter Tools</button>
+    </div>
+</div>
+<!-- END HACKER NETWORK POPUP -->
+<div style="text-align:center;padding:40px;"><i class="fa-solid fa-triangle-exclamation" style="font-size:72px;color:#FF3B30;margin-bottom:20px;animation:sp 0.5s ease-in-out infinite alternate;filter:drop-shadow(0 0 20px rgba(255,59,48,0.5));"></i><div style="font-size:24px;font-weight:800;letter-spacing:3px;color:#fff;margin-bottom:10px;">TAMPER DETECTED</div><div style="font-size:14px;color:#94A3B8;letter-spacing:2px;">This file has been modified</div></div><style>@keyframes sp{from{transform:scale(1);}to{transform:scale(1.1);}}</style></body></html>');document.close();
+    }
+  },800);
+});
+})();</script></body></html>
